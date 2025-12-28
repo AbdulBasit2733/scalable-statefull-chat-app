@@ -9,7 +9,7 @@ describe("Chat Application", () => {
     const ws2 = new WebSocket(BACKEND_URL);
 
     await new Promise<void>((resolve, reject) => {
-      let count = 1;
+      let count = 0;
       ws1.onopen = () => {
         count = count + 1;
         if (count == 2) {
